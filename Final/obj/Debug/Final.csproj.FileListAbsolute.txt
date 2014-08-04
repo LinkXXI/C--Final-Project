@@ -1,0 +1,6 @@
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\bin\Final.dll
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\bin\Final.pdb
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\obj\Debug\Final.Properties.Resources.resources
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\obj\Debug\Final.csproj.GenerateResource.Cache
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\obj\Debug\Final.dll
+e:\kevin\documents\visual studio 2010\Projects\Final\Final\obj\Debug\Final.pdb
