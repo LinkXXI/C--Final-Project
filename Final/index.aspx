@@ -20,7 +20,7 @@
                 <asp:Button ID="btnContinue" runat="server" Text="Continue Quest" 
                     class='btn btn-default' onclick="btnContinue_Click"/>
                 <asp:Button ID="btnDelete" runat="server" Text="Delete Quest" class='btn btn-default' 
-                    onclick="btn_Click"/>
+                    onclick="btnDelete_Click"/>
             </div>
         </div>
     </div>

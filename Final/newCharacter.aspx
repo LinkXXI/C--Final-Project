@@ -1,29 +1,37 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="newCharacter.aspx.cs" Inherits="Final.WebForm2" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true"
+    CodeBehind="newCharacter.aspx.cs" Inherits="Final.WebForm2" %>
 
-<style>
-    .control
-    {
-        width:100%;
-    }
-</style>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .control
+        {
+            width: 100%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row">
+            <div class="span1">
+                <asp:Label ID="LabelMsg" runat="server" ForeColor="red" Font-Bold="true"></asp:Label>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4">
-            <p>Character Name</p>
+                <p>
+                    Character Name:</p>
             </div>
             <div class="col-md-4">
                 <asp:TextBox ID="txtCharName" runat="server" class='control' MaxLength="50"></asp:TextBox>
             </div>
             <div class="col-md-4">
-                <asp:RequiredFieldValidator ID="txtCharEmptyValidate" runat="server" ErrorMessage="Character Name is required. " ControlToValidate="txtCharName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="txtCharEmptyValidate" runat="server" ErrorMessage="Character Name is required. "
+                    ControlToValidate="txtCharName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
-                Class
+                Class:
             </div>
             <div class="col-md-4">
                 <asp:DropDownList ID="lstClassSelect" runat="server" class='control'>
@@ -38,19 +46,14 @@
             <div class="col-md-4">
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <br />
+                <asp:Button ID="btnSubmit" runat="server" Text="Submit" class='btn btn-default' OnClick="btnSubmit_Click" />
+            </div>
+        </div>
     </div>
-    <div class="row">
-            <div class="col-md-4">
-               
-            </div>
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-                 <asp:Button ID="btnSubmit" runat="server" Text="Submit" class='btn btn-default' 
-                     onclick="btnSubmit_Click"/>
-            </div>
-    </div>
-    <asp:SqlDataSource ID="characterSource" runat="server" 
-    ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-    SelectCommand="SELECT * FROM [Character]" InsertCommand="INSERT INTO [Character] VALUES" ></asp:SqlDataSource>
+    <asp:SqlDataSource ID="characterSource" runat="server" ConnectionString="<%$ ConnectionStrings:InsertCharDS
+    %>" SelectCommand="SELECT * FROM [Character]" InsertCommand="INSERT INTO [Character]
+    VALUES"> </asp:SqlDataSource>
 </asp:Content>

@@ -15,6 +15,13 @@ namespace Final
             {
                 Response.Redirect("/index.aspx");
             }
+            else {
+                string message = (string)(Session["message"]);
+                if (message != null)
+                {
+                    LabelMsg.Text = message;
+                }
+            }
         }
     }
 }

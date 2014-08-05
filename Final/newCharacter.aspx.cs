@@ -33,9 +33,23 @@ namespace Final
                 SqlCommand command = new SqlCommand();
 
                 characterSource.InsertCommand = playerChar.SqlInsert;
-                characterSource.Insert();
 
-                Response.Redirect("map.aspx");
+                try // need try-catch to catch SqlExceptions
+                {
+                    characterSource.Insert();
+
+                    string message = "Character successfully created.";
+                    Session["message"] = message;
+                    Response.Redirect("map.aspx");
+                }
+                catch (SqlException ex)
+                {
+                    // unsuccessful, display msg
+
+                    //LabelMsg.Text = "Error: " + ex.Message;
+                    LabelMsg.Text = "Error: This character already exists, please choose a new name.";
+                }
+
             }
         }
     }

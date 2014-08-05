@@ -9,7 +9,6 @@ namespace Final
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,7 +16,7 @@ namespace Final
 
         protected void btnContinue_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("/loadCharacter.aspx");
         }
 
         protected void btnNew_Click(object sender, EventArgs e)
@@ -25,9 +24,9 @@ namespace Final
             Response.Redirect("/newCharacter.aspx");
         }
 
-        protected void btn_Click(object sender, EventArgs e)
+        protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/deleteCharacter.aspx");
         }
     }
 }
