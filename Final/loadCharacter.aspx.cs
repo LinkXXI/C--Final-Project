@@ -62,7 +62,7 @@ namespace Final
 
                     Session.Add("Character", playerChar);
 
-                    string message = "Character successfully loaded.";
+                    string message = "Character successfully loaded: " + playerChar.CharacterName;
                     Session["message"] = message;
                     Response.Redirect("map.aspx");
                 }
