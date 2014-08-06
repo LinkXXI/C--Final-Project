@@ -21,12 +21,18 @@ namespace Final
             {
                 int attack = 0;
                 int health = 0;
+                int damageTaken = 0;
+                int days = 0;
+                int enemyLevel = 0;
 
                 Character playerChar = new Character();
-                playerChar.Attack = attack;
+                playerChar.CharacterName = txtCharName.Text;
                 playerChar.Class = lstClassSelect.SelectedItem.Value;
+                playerChar.Attack = attack;
                 playerChar.Health = health;
-                playerChar.Name = txtCharName.Text;
+                playerChar.DamageTaken = damageTaken;
+                playerChar.Days = days;
+                playerChar.EnemyLevel = enemyLevel;                
 
                 Session.Add("Character", playerChar);
 

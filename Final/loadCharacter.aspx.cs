@@ -17,6 +17,8 @@ namespace Final
         DataTable dt;
         DataSet ds;
 
+        int affectedRows = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,8 +31,47 @@ namespace Final
             {
                 // this fires the characterSource_Selected event below
                 // store what is returned by SELECT into a DataView. More in the characterSource_Selected event
+                dv = new DataView();
                 dv = (DataView)characterSource.Select(DataSourceSelectArguments.Empty);
 
+                if (affectedRows > 0)
+                {
+                    DataTable dt = new DataTable();
+
+                    dt = dv.ToTable();
+                    ds = new DataSet();
+                    ds.Tables.Add(dt);
+
+                    DataRow dRow = ds.Tables[0].Rows[0];
+                    string characterName = dRow.ItemArray.GetValue(0).ToString();
+                    string characterClass = dRow.ItemArray.GetValue(1).ToString();
+                    int attack = (int)dRow.ItemArray.GetValue(2);
+                    int health = (int)dRow.ItemArray.GetValue(3);
+                    int damage = (int)dRow.ItemArray.GetValue(4);
+                    int days = (int)dRow.ItemArray.GetValue(5);
+                    int enemyLevel = (int)dRow.ItemArray.GetValue(6);
+
+                    Character playerChar = new Character();
+                    playerChar.CharacterName = characterName;
+                    playerChar.Class = characterClass;
+                    playerChar.Attack = attack;
+                    playerChar.Health = health;
+                    playerChar.DamageTaken = damage;
+                    //playerChar.Days = days;
+                    //playerChar.EnemyLevel = health;
+
+                    Session.Add("Character", playerChar);
+
+                    string message = "Character successfully loaded.";
+                    Session["message"] = message;
+                    Response.Redirect("map.aspx");
+                }
+                else
+                {
+                    string message = "Character data not found.";
+                    Session["message"] = message;
+                    Response.Redirect("map.aspx");
+                }
             }
             catch (SqlException ex)
             {
@@ -45,32 +86,8 @@ namespace Final
         {
             if (e.AffectedRows > 0)
             {
-                LabelMsg.ForeColor = Color.Green;
-                LabelMsg.Text = "Character successfully loaded.";
-                // create character object with attributes from db
-                dt = dv.ToTable();
-                ds = new DataSet();
-                ds.Tables.Add(dt);
+                affectedRows = e.AffectedRows;
 
-                DataRow dRow = ds.Tables[0].Rows[1];
-                string characterName = dRow.ItemArray.GetValue(1).ToString();
-                string characterClass = dRow.ItemArray.GetValue(2).ToString();
-                int attack = (int)dRow.ItemArray.GetValue(3);
-                int health = (int)dRow.ItemArray.GetValue(4);
-                int damage = (int)dRow.ItemArray.GetValue(5);
-                int days = (int)dRow.ItemArray.GetValue(6);
-                int enemyLevel = (int)dRow.ItemArray.GetValue(7);
-
-                Character playerChar = new Character();
-                playerChar.Name = characterName;
-                playerChar.Class = characterClass;
-                playerChar.Attack = attack;
-                playerChar.Health = health;
-                playerChar.DamageTaken = damage;
-                //playerChar.Days = days;
-                //playerChar.EnemyLevel = health;
-
-                Session.Add("Character", playerChar);
             }
         }
     }

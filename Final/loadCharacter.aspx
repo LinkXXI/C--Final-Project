@@ -13,7 +13,7 @@
             </div>
             <div class='row'>
                 <div class="col-md-4">
-                    Character Name
+                    Character Name:
                 </div>
                 <div class="col-md-4">
                     <asp:TextBox ID="txtCharName" runat="server"></asp:TextBox>
@@ -26,8 +26,8 @@
             <asp:Button ID="btnSubmit" runat="server" Text="Load Character" OnClick="btnSubmit_Click" />
         </div>
     </div>
-    <asp:SqlDataSource ID="characterSource"  OnSelected="characterSource_Selected" runat="server" ConnectionString="<%$ ConnectionStrings:InsertCharDS %>"
-        SelectCommand="SELECT * FROM [Character] WHERE ([CharacterName] = @CharacterName)">
+    <asp:SqlDataSource ID="characterSource" OnSelected="characterSource_Selected" runat="server"
+        ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" SelectCommand="SELECT * FROM [Character] WHERE ([CharacterName] = @CharacterName)">
         <SelectParameters>
             <asp:ControlParameter ControlID="txtCharName" Name="CharacterName" PropertyName="Text"
                 Type="String" />

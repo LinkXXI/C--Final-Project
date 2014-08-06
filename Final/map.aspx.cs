@@ -20,6 +20,7 @@ namespace Final
                 if (message != null)
                 {
                     LabelMsg.Text = message;
+                    Session["message"] = null;
                 }
             }
         }
