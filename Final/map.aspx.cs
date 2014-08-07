@@ -29,5 +29,10 @@ namespace Final
         {
             Response.Redirect("house.aspx");
         }
+
+        protected void btnMine_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("mine.aspx");
+        }
     }
 }

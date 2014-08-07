@@ -11,6 +11,11 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.PreRender += new EventHandler(NestedMasterPage1_PreRender);
+        }
+
+        void NestedMasterPage1_PreRender(object sender, EventArgs e)
+        {
             lblCharData.Text = ((Character)Session["Character"]).ToString();
         }
     }

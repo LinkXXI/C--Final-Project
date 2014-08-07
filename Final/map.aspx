@@ -8,7 +8,8 @@
         <asp:Button ID="btnForest" runat="server" Text="Forest" class="btn btn-default"/>
         <asp:Button ID="btnHouse" runat="server" Text="House" class="btn btn-default"
             onclick="btnHouse_Click" />
-        <asp:Button ID="btnMine" runat="server" Text="Mine" class="btn btn-default"/>
+        <asp:Button ID="btnMine" runat="server" Text="Mine" class="btn btn-default" 
+            onclick="btnMine_Click"/>
         <asp:Button ID="btnShop" runat="server" Text="Shop" class="btn btn-default"/>
     </div>
 </asp:Content>
