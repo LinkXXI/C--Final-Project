@@ -75,9 +75,17 @@
     <Content Include="loadCharacter.aspx" />
     <Content Include="deleteCharacter.aspx" />
     <Content Include="forest.aspx" />
+    <Content Include="house.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Character.cs" />
+    <Compile Include="house.aspx.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="house.aspx.designer.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+    </Compile>
     <Content Include="App_Code\Classes.cs" />
     <Compile Include="characterPages.master.cs">
       <DependentUpon>characterPages.master</DependentUpon>

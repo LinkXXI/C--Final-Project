@@ -25,6 +25,18 @@ namespace Final
                 int days = 0;
                 int enemyLevel = 0;
 
+                switch (lstClassSelect.SelectedItem.Value)
+                {
+                    case "Warrior":
+                        health = 100;
+                        attack = 50;
+                        break;
+                    case "Wizard":
+                        health = 50;
+                        attack = 100;
+                        break;
+                }
+
                 Character playerChar = new Character();
                 playerChar.CharacterName = txtCharName.Text;
                 playerChar.Class = lstClassSelect.SelectedItem.Value;
@@ -32,7 +44,8 @@ namespace Final
                 playerChar.Health = health;
                 playerChar.DamageTaken = damageTaken;
                 playerChar.Days = days;
-                playerChar.EnemyLevel = enemyLevel;                
+                playerChar.EnemyLevel = enemyLevel;
+                playerChar.Gold = 1000;
 
                 Session.Add("Character", playerChar);
 

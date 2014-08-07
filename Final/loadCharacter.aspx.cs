@@ -57,7 +57,7 @@ namespace Final
                     playerChar.Attack = attack;
                     playerChar.Health = health;
                     playerChar.DamageTaken = damage;
-                    //playerChar.Days = days;
+                    playerChar.Days = days;
                     //playerChar.EnemyLevel = health;
 
                     Session.Add("Character", playerChar);
@@ -69,8 +69,9 @@ namespace Final
                 else
                 {
                     string message = "Character data not found.";
-                    Session["message"] = message;
-                    Response.Redirect("map.aspx");
+                    //Session["message"] = message;
+                    //Response.Redirect("map.aspx");
+                    LabelMsg.Text = "Character data not found.";
                 }
             }
             catch (SqlException ex)

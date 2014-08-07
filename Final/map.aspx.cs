@@ -24,5 +24,10 @@ namespace Final
                 }
             }
         }
+
+        protected void btnHouse_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("house.aspx");
+        }
     }
 }

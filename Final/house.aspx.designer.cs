@@ -10,51 +10,60 @@
 namespace Final {
     
     
-    public partial class WebForm3 {
+    public partial class WebForm7 {
         
         /// <summary>
-        /// LabelMsg control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMsg;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// btnForest control.
+        /// btnSleep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnForest;
+        protected global::System.Web.UI.WebControls.Button btnSleep;
         
         /// <summary>
-        /// btnHouse control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnHouse;
+        protected global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
-        /// btnMine control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMine;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// btnShop control.
+        /// btnMap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnShop;
+        protected global::System.Web.UI.WebControls.Button btnMap;
+        
+        /// <summary>
+        /// saveSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource saveSource;
     }
 }
