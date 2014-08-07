@@ -18,3 +18,10 @@ E:\Kevin\Git\C--Final-Project\Final\obj\Debug\Final.Properties.Resources.resourc
 E:\Kevin\Git\C--Final-Project\Final\obj\Debug\Final.csproj.GenerateResource.Cache
 E:\Kevin\Git\C--Final-Project\Final\obj\Debug\Final.dll
 E:\Kevin\Git\C--Final-Project\Final\obj\Debug\Final.pdb
+D:\C--Final-Project\Final\bin\Final.dll
+D:\C--Final-Project\Final\bin\Final.pdb
+D:\C--Final-Project\Final\obj\Debug\Final.csprojResolveAssemblyReference.cache
+D:\C--Final-Project\Final\obj\Debug\Final.Properties.Resources.resources
+D:\C--Final-Project\Final\obj\Debug\Final.csproj.GenerateResource.Cache
+D:\C--Final-Project\Final\obj\Debug\Final.dll
+D:\C--Final-Project\Final\obj\Debug\Final.pdb

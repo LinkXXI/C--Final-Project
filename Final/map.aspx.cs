@@ -34,5 +34,10 @@ namespace Final
         {
             Response.Redirect("mine.aspx");
         }
+
+        protected void btnShop_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("shop.aspx");
+        }
     }
 }

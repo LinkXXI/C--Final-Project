@@ -62,6 +62,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="mine.aspx" />
+    <Content Include="shop.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="house.aspx.designer.cs">
       <DependentUpon>house.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shop.aspx.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shop.aspx.designer.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\Classes.cs" />
     <Compile Include="characterPages.master.cs">

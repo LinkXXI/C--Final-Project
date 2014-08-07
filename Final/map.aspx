@@ -10,6 +10,7 @@
             onclick="btnHouse_Click" />
         <asp:Button ID="btnMine" runat="server" Text="Mine" class="btn btn-default" 
             onclick="btnMine_Click"/>
-        <asp:Button ID="btnShop" runat="server" Text="Shop" class="btn btn-default"/>
+        <asp:Button ID="btnShop" runat="server" Text="Shop" class="btn btn-default"
+            onclick="btnShop_Click"/>
     </div>
 </asp:Content>
