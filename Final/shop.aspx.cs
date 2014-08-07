@@ -17,6 +17,10 @@ namespace Final
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Character"] == null)
+            {
+                Response.Redirect("/index.aspx?NoCharacter=true");
+            }
             //dynamicly create item page from iterating through select * statement
             SqlCommand command = new SqlCommand();
 

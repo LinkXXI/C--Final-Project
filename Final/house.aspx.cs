@@ -11,6 +11,10 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Character"] == null)
+            {
+                Response.Redirect("/index.aspx?NoCharacter=true");
+            }
             lblName.Text = ((Character)Session["Character"]).CharacterName;
         }
 

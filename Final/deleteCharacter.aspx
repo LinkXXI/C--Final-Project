@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class='container'>
         <div class="jumbotron">
+            <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
             <div class='row'>
                 <div class="col-md-4">
                     Character Name
@@ -12,7 +13,7 @@
                     <asp:TextBox ID="txtCharName" runat="server"></asp:TextBox>
                 </div>
                 <div class="col-md-4">
-                    <asp:RequiredFieldValidator ID="txtCharValidate" runat="server" ErrorMessage="RequiredFieldValidator" Display="Dynamic" ControlToValidate="txtCharName"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="txtCharValidate" runat="server" ErrorMessage="Cannot delete without a character name!" Display="Dynamic" ControlToValidate="txtCharName"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <asp:Button ID="btnSubmit" runat="server" Text="Button" 
@@ -21,9 +22,11 @@
     </div>
     <asp:SqlDataSource ID="deleteCharacterSource" runat="server" 
         ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-        
-        SelectCommand="SELECT [CharacterName] FROM [Character] WHERE ([CharacterName] = @CharacterName)" 
-        onselecting="deleteCharacterSource_Selecting">
+        SelectCommand="SELECT [CharacterName] FROM [Character] WHERE ([CharacterName] = @CharacterName)"
+        DeleteCommand="DELETE FROM [Character] WHERE ([CharacterName] = @CharacterName)">
+        <DeleteParameters>
+            <asp:ControlParameter ControlID="txtCharName" Name="CharacterName" PropertyName="Text" Type="String" />
+        </DeleteParameters>
         <SelectParameters>
             <asp:ControlParameter ControlID="txtCharName" Name="CharacterName" 
                 PropertyName="Text" Type="String" />

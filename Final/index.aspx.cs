@@ -11,7 +11,14 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString["Deleted"] == "true")
+            {
+                lblMessage.Text = Request.QueryString["CharacterName"] + " successfully deleted.";
+            }
+            if (Request.QueryString["NoCharacter"] == "true")
+            {
+                lblMessage.Text = "You must create or load a character to play!";
+            }
         }
 
         protected void btnContinue_Click(object sender, EventArgs e)

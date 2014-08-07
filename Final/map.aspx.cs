@@ -13,15 +13,11 @@ namespace Final
         {
             if (Session["Character"] == null)
             {
-                Response.Redirect("/index.aspx");
+                Response.Redirect("/index.aspx?NoCharacter=true");
             }
-            else {
-                string message = (string)(Session["message"]);
-                if (message != null)
-                {
-                    LabelMsg.Text = message;
-                    Session["message"] = null;
-                }
+            if (Request.QueryString["Loaded"] == "true")
+            {
+                LabelMsg.Text = Request.QueryString["Message"];
             }
         }
 

@@ -11,7 +11,10 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["Character"] == null)
+            {
+                Response.Redirect("/index.aspx?NoCharacter=true");
+            }
         }
 
         protected void btnMap_Click(object sender, EventArgs e)

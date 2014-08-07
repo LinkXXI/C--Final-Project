@@ -50,6 +50,7 @@ namespace Final
                     int damage = (int)dRow.ItemArray.GetValue(4);
                     int days = (int)dRow.ItemArray.GetValue(5);
                     int enemyLevel = (int)dRow.ItemArray.GetValue(6);
+                    int gold = (int)dRow.ItemArray.GetValue(7);
 
                     Character playerChar = new Character();
                     playerChar.CharacterName = characterName;
@@ -58,19 +59,17 @@ namespace Final
                     playerChar.Health = health;
                     playerChar.DamageTaken = damage;
                     playerChar.Days = days;
+                    playerChar.Gold = gold;
                     //playerChar.EnemyLevel = health;
 
                     Session.Add("Character", playerChar);
 
                     string message = "Character successfully loaded: " + playerChar.CharacterName;
-                    Session["message"] = message;
-                    Response.Redirect("map.aspx");
+                    Response.Redirect("map.aspx?Loaded=true&Message=" + message);
                 }
                 else
                 {
                     string message = "Character data not found.";
-                    //Session["message"] = message;
-                    //Response.Redirect("map.aspx");
                     LabelMsg.Text = "Character data not found.";
                 }
             }
