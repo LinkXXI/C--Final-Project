@@ -18,5 +18,16 @@ namespace Final
         {
             Response.Redirect("map.aspx");
         }
+
+        protected void btnMine_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            Character playerChar = (Character)Session["Character"];
+
+            int goldEarned = random.Next(1, 10000);
+            playerChar.AddGold(goldEarned);
+            playerChar.Days++;
+            lblMessage.Text = "You earned " + goldEarned + " gold today in the mines.";
+        }
     }
 }

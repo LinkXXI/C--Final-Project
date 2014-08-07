@@ -37,7 +37,7 @@ namespace Final
         }
 
         override public string ToString(){
-            return CharacterName + " the " + Class + " Health: " + CurrentHealth + "/" + Health  + "<br />" + CharacterName + " has been questing for " + Days + " Days";
+            return CharacterName + " the " + Class + " Health: " + CurrentHealth + "/" + Health  + "<br />" + CharacterName + " has been questing for " + Days + " Days" + "<br />" + CharacterName + " has " + Gold + " gold.";
         }
 
         public void AddGold(int amount)

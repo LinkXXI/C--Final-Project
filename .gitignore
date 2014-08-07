@@ -1,0 +1,7 @@
+*.suo
+Final/bin/Final.dll
+Final/bin/Final.pdb
+Final/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Final/obj/Debug/Final.csproj.GenerateResource.Cache
+Final/obj/Debug/Final.dll
+Final/obj/Debug/Final.pdb
