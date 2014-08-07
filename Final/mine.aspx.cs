@@ -30,6 +30,8 @@ namespace Final
             int goldEarned = random.Next(1, 10000);
             playerChar.AddGold(goldEarned);
             playerChar.Days++;
+            message.Attributes.Remove("hidden");
+            message.Attributes["class"] = "alert alert-info";
             lblMessage.Text = "You earned " + goldEarned + " gold today in the mines.";
         }
     }

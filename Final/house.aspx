@@ -8,8 +8,9 @@
         <asp:Button ID="btnSave" runat="server" Text="Save Quest" 
             Class="btn btn-default" onclick="btnSave_Click" />
         <br />
-        <asp:Label ID="lblMessage" runat="server" Text="" Font-Bold="True" 
-            ForeColor="Green"></asp:Label>
+        <div id="message" hidden runat="server">
+            <asp:Label ID="lblMessage" runat="server" Text="" Font-Bold="True"></asp:Label>
+        </div>
             <br />
         <asp:Button ID="btnMap" runat="server" Text="Return to map" 
             Class="btn btn-default" onclick="btnMap_Click"/>

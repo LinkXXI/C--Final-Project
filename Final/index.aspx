@@ -11,7 +11,9 @@
     <div class='container'>
         <div class="jumbotron">
             <h1>Welcome to DogeQuest!</h1>
-            <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Green"></asp:Label>
+            <div id="error" runat="server" hidden="true">
+                <asp:Label ID="lblMessage" runat="server" Font-Bold="True"></asp:Label>
+            </div>            
             <p>
                 Fight Monsters, grow more powerfull, make money, such adventure!
             </p>

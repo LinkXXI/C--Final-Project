@@ -59,13 +59,15 @@ namespace Final
 
                     string message = "Character successfully created.";
                     Session["message"] = message;
-                    Response.Redirect("map.aspx");
+                    Response.Redirect("map.aspx?Created=true&Message=" + message);
                 }
                 catch (SqlException ex)
                 {
                     // unsuccessful, display msg
 
                     //LabelMsg.Text = "Error: " + ex.Message;
+                    error.Attributes.Remove("hidden");
+                    error.Attributes["class"] = "alert alert-warning";
                     LabelMsg.Text = "Error: This character already exists, please choose a new name.";
                 }
 

@@ -13,10 +13,14 @@ namespace Final
         {
             if (Request.QueryString["Deleted"] == "true")
             {
+                error.Attributes.Remove("hidden");
+                error.Attributes["class"] = "alert alert-success";
                 lblMessage.Text = Request.QueryString["CharacterName"] + " successfully deleted.";
             }
             if (Request.QueryString["NoCharacter"] == "true")
             {
+                error.Attributes.Remove("hidden");  
+                error.Attributes["class"] = "alert alert-warning";
                 lblMessage.Text = "You must create or load a character to play!";
             }
         }

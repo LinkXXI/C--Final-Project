@@ -7,7 +7,7 @@
     <div class='container'>
         <div class="jumbotron">
             <div class="row">
-                <div class="span1">
+                <div id="error" runat="server" hidden>
                     <asp:Label ID="LabelMsg" runat="server" Font-Bold="true"></asp:Label>
                 </div>
             </div>

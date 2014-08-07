@@ -21,6 +21,8 @@ namespace Final
         protected void btnSleep_Click(object sender, EventArgs e)
         {
             Character playerChar = (Character)Session["Character"];
+            message.Attributes.Remove("hidden");
+            message.Attributes["class"] = "alert alert-info";
             lblMessage.Text = "You have rested and restored " + playerChar.DamageTaken + " health.";
             playerChar.DamageTaken = 0;
             playerChar.Days++;
@@ -36,6 +38,9 @@ namespace Final
         {
             saveSource.UpdateCommand = ((Character)Session["Character"]).SqlUpdate;
             saveSource.Update();
+            message.Attributes.Remove("hidden");
+            message.Attributes["class"] = "alert alert-success";
+            lblMessage.Text = "Character has been saved!";
         }
     }
 }

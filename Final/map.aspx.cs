@@ -17,6 +17,14 @@ namespace Final
             }
             if (Request.QueryString["Loaded"] == "true")
             {
+                message.Attributes.Remove("hidden");
+                message.Attributes["class"] = "alert alert-success";
+                LabelMsg.Text = Request.QueryString["Message"];
+            }
+            if (Request.QueryString["Created"] == "true")
+            {
+                message.Attributes.Remove("hidden");
+                message.Attributes["class"] = "alert alert-success";
                 LabelMsg.Text = Request.QueryString["Message"];
             }
         }

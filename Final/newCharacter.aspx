@@ -12,8 +12,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row">
-            <div class="span1">
-                <asp:Label ID="LabelMsg" runat="server" ForeColor="red" Font-Bold="true"></asp:Label>
+            <div id="error" runat="server" hidden>
+                <asp:Label ID="LabelMsg" runat="server" Font-Bold="true"></asp:Label>
             </div>
         </div>
         <div class="row">

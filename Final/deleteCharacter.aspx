@@ -4,7 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class='container'>
         <div class="jumbotron">
-            <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+        <div hidden id="error" runat="server">
+            <asp:Label ID="lblMessage" runat="server" Font-Bold="True"></asp:Label>
+        </div>
             <div class='row'>
                 <div class="col-md-4">
                     Character Name

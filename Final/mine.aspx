@@ -5,7 +5,9 @@
         <asp:Button ID="btnMine" runat="server" Text="Mine!" class="btn btn-default" 
             onclick="btnMine_Click"/>
         <br />
-        <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Green"></asp:Label>
+        <div id="message" hidden runat="server">
+            <asp:Label ID="lblMessage" runat="server" Font-Bold="True"></asp:Label>
+        </div>
         <br />
         <asp:Button ID="btnMap" runat="server" Text="Return to Map" 
             onclick="btnMap_Click" class="btn btn-default"/>

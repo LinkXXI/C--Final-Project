@@ -3,7 +3,9 @@
 
 <asp:Content ID="characterContent" ContentPlaceHolderID="characterContent" runat="server">
     <div class="container">
-        <asp:Label ID="LabelMsg" runat="server" ForeColor="green" Font-Bold="true"></asp:Label>
+        <div id="message" hidden runat="server">
+            <asp:Label ID="LabelMsg" runat="server" Font-Bold="true"></asp:Label>
+        </div>
         <br />
         <asp:Button ID="btnForest" runat="server" Text="Forest" class="btn btn-default"/>
         <asp:Button ID="btnHouse" runat="server" Text="House" class="btn btn-default"

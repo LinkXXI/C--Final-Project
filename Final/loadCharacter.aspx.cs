@@ -69,7 +69,8 @@ namespace Final
                 }
                 else
                 {
-                    string message = "Character data not found.";
+                    error.Attributes.Remove("hidden");
+                    error.Attributes["class"] = "alert alert-warning";
                     LabelMsg.Text = "Character data not found.";
                 }
             }
@@ -78,6 +79,8 @@ namespace Final
                 // unsuccessful, display msg
 
                 //LabelMsg.Text = "Error: " + ex.Message;
+                error.Attributes.Remove("hidden");
+                error.Attributes["class"] = "alert alert-warning";
                 LabelMsg.Text = "Error: This character could not be loaded.";
             }
         }

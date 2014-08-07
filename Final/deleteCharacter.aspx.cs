@@ -25,6 +25,8 @@ namespace Final
                 DataTable dt = dV.ToTable();
                 if (dt.Rows.Count == 0)
                 {
+                    error.Attributes.Remove("hidden");
+                    error.Attributes["class"] = "alert alert-warning";
                     lblMessage.Text = "No character with name " + txtCharName.Text + "found, unable to delete.";
                 }
                 else
