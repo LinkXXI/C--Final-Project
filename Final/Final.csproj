@@ -97,6 +97,7 @@
     <Compile Include="house.aspx.designer.cs">
       <DependentUpon>house.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Monster.cs" />
     <Compile Include="shop.aspx.cs">
       <DependentUpon>shop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

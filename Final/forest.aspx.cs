@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using Final;
 
 namespace Final
 {
     public partial class Forest : System.Web.UI.Page
     {
-        String pName;
+        /*String pName;
         int pAttack;
         int pHealth;
         int pDamage;
@@ -20,45 +22,50 @@ namespace Final
         int mAttack;
         int mHealth;
         int mDamage;
-        int mGold;
+        int mGold;*/
+
+        Character playerChar;
+        Monster currentMonster;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Div1.InnerHtml = GridView1.Rows[0].Cells[0].Text.ToString();
-            Div2.InnerHtml = GridView1.Rows[0].Cells[1].Text.ToString();
-            Div3.InnerHtml = GridView1.Rows[0].Cells[2].Text.ToString();
-            Div4.InnerHtml = GridView1.Rows[0].Cells[3].Text.ToString();
-            Div5.InnerHtml = GridView1.Rows[0].Cells[4].Text.ToString();
+            playerChar = (Character)Session["Character"];
+            lblMaxLevel.Text = playerChar.EnemyLevel.ToString();
+            if (Session["Monster"] == null)
+            {
+                DataView dv = new DataView();
+                dv = (DataView)monsterSource.Select(DataSourceSelectArguments.Empty);
+                DataTable dt = dv.ToTable();
+                DataSet ds = new DataSet();
+                ds.Tables.Add(dt);
 
-            //player stats
-            
-            pName = ((Character)Session["Character"]).CharacterName;
-            pAttack = ((Character)Session["Character"]).Attack;
-            pHealth = ((Character)Session["Character"]).Health;
-            pDamage = ((Character)Session["Character"]).DamageTaken;
-            pGold = ((Character)Session["Character"]).Gold;
+                DataRow dr = ds.Tables[0].Rows[0];
 
-            pHealth -= pDamage; 
+                currentMonster = new Monster();
+                currentMonster.Level = (int)dr.ItemArray.GetValue(0);
+                currentMonster.Name = (string)dr.ItemArray.GetValue(1);
+                currentMonster.Attack = (int)dr.ItemArray.GetValue(2);
+                currentMonster.Health = (int)dr.ItemArray.GetValue(3);
+                currentMonster.goldReward = (int)dr.ItemArray.GetValue(4);
+                //currentMonster.imgURL = (string)dr.ItemArray.GetValue(5);
 
-            //monster stats
-            mlevel = Convert.ToInt32(Div1.InnerHtml);
-            mName = Convert.ToString(Div2.InnerHtml);
-            ((Character)Session["Monster"]).CharacterName = mName;
-            mAttack = Convert.ToInt32(Div3.InnerText);
-           // ((Character)Session["Monster"]).Attack = mAttack;
-            mHealth = Convert.ToInt32(Div4.InnerText);
-           // mDamage = ((Character)Session["Monster"]).DamageTaken;
-          //  ((Character)Session["Monster"]).Health = mHealth;
-            mGold = Convert.ToInt32(Div5.InnerText);
-           // ((Character)Session["Monster"]).Gold = mGold;
+                Session["Monster"] = currentMonster;
+            }
+            else
+            {
+                currentMonster = (Monster)Session["Monster"];
+            }
 
-            player.InnerHtml = pName + ":    Attack: " + pAttack + " Health: " + pHealth;
+            lblCharacterInfo.Text = playerChar.CharacterName + " the " + playerChar.Class + ": " + playerChar.CurrentHealth + "/" + playerChar.Health
+                + "<br />" + "Attack: " + playerChar.Attack;
+            lblEnemyName.Text = currentMonster.Name;
+            lblEnemyStats.Text = "Health: " + (currentMonster.Health - currentMonster.DamageTaken) + "/" + currentMonster.Health;
 
         }
 
-        protected void Attack_Click(object sender, EventArgs e)
+        protected void btnAttack_Click(object sender, EventArgs e)
         {
-            if (pHealth > 0)
+            /*if (pHealth > 0)
             {
                 if (mHealth > 0)
                 {
@@ -76,10 +83,10 @@ namespace Final
                 }
                 player.InnerHtml = "YOU WIN!";
             }
-            player.InnerHtml = "YOU LOSE!";
+            player.InnerHtml = "YOU LOSE!";*/
         }
 
-        protected void Run_Click(object sender, EventArgs e)
+        protected void btnRun_Click(object sender, EventArgs e)
         {
             Response.Redirect("map.aspx");
         }

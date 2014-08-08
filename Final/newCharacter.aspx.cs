@@ -23,7 +23,7 @@ namespace Final
                 int health = 0;
                 int damageTaken = 0;
                 int days = 0;
-                int enemyLevel = 0;
+                int enemyLevel = 1;
 
                 switch (lstClassSelect.SelectedItem.Value)
                 {
