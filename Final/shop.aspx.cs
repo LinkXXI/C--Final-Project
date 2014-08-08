@@ -46,10 +46,15 @@ namespace Final
                 ((Character)Session["Character"]).Attack = pAttack;
                 pHealth += itemHealth;
                 ((Character)Session["Character"]).Health = pHealth;
+
+                messageDiv.Attributes.Remove("hidden");
+                messageDiv.Attributes.Add("class", "alert alert-success");
                 message.InnerHtml = "You bought " + Div1.InnerText;
             }
             else
             {
+                messageDiv.Attributes.Remove("hidden");
+                messageDiv.Attributes.Add("class", "alert alert-warning");
                 message.InnerHtml = "You dont have enough gold to buy " + Div1.InnerText;
             }
 

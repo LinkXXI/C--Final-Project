@@ -11,7 +11,7 @@
             </asp:SqlDataSource>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="ItemName" DataSourceID="SqlDataSource1" 
-                onselectedindexchanged="GridView1_SelectedIndexChanged">
+                onselectedindexchanged="GridView1_SelectedIndexChanged" CssClass="table">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="ItemName" HeaderText="ItemName" ReadOnly="True" 
@@ -38,8 +38,11 @@
         <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
         <br />
         <asp:Button ID="btnMap" runat="server" Text="Return to Map" 
-            onclick="btnMap_Click" />
+            onclick="btnMap_Click" class="btn btn-default"/>
+        <div id="messageDiv" hidden runat="server" style="margin-top:10px;"> 
             <div runat="server" id="message" class="container">
+        </div>
     </div>
     
+    </div>
 </asp:Content>
