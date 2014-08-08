@@ -65,6 +65,10 @@
     <Content Include="img\class\dogewarrior.png" />
     <Content Include="img\class\dogewizard.png" />
     <Content Include="img\doge-wink-212.gif" />
+    <Content Include="img\forest.png" />
+    <Content Include="img\home.png" />
+    <Content Include="img\mines.png" />
+    <Content Include="img\shop.png" />
     <Content Include="img\theDogeKnight.png" />
     <Content Include="mine.aspx" />
     <Content Include="shop.aspx" />
@@ -99,6 +103,7 @@
     <Compile Include="house.aspx.designer.cs">
       <DependentUpon>house.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\Monster.cs" />
     <Compile Include="shop.aspx.cs">
       <DependentUpon>shop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

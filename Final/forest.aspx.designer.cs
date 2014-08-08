@@ -31,111 +31,75 @@ namespace Final {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl combat;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// monsterSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource monsterSource;
         
         /// <summary>
-        /// GridView1 control.
+        /// lblMaxLevel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label lblMaxLevel;
         
         /// <summary>
-        /// player control.
+        /// lblEnemyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl player;
+        protected global::System.Web.UI.WebControls.Label lblEnemyName;
         
         /// <summary>
-        /// monster control.
+        /// imgEnemy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl monster;
+        protected global::System.Web.UI.WebControls.Image imgEnemy;
         
         /// <summary>
-        /// Attack control.
+        /// lblEnemyStats control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Attack;
+        protected global::System.Web.UI.WebControls.Label lblEnemyStats;
         
         /// <summary>
-        /// Run control.
+        /// lblCharacterInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Run;
+        protected global::System.Web.UI.WebControls.Label lblCharacterInfo;
         
         /// <summary>
-        /// monsterDiv control.
+        /// btnAttack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl monsterDiv;
+        protected global::System.Web.UI.WebControls.Button btnAttack;
         
         /// <summary>
-        /// Div1 control.
+        /// btnRun control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
-        
-        /// <summary>
-        /// Div2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
-        
-        /// <summary>
-        /// Div3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
-        
-        /// <summary>
-        /// Div4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div4;
-        
-        /// <summary>
-        /// Div5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div5;
+        protected global::System.Web.UI.WebControls.Button btnRun;
     }
 }
