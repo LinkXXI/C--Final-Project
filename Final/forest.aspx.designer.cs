@@ -40,6 +40,24 @@ namespace Final {
         protected global::System.Web.UI.WebControls.SqlDataSource monsterSource;
         
         /// <summary>
+        /// saveSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource saveSource;
+        
+        /// <summary>
+        /// lblName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblName;
+        
+        /// <summary>
         /// lblMaxLevel control.
         /// </summary>
         /// <remarks>

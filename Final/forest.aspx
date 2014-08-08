@@ -7,7 +7,7 @@
 
             <asp:SqlDataSource ID="monsterSource" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = 1)">
+                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = @level)">
                 <SelectParameters>
                     
                     <asp:ControlParameter ControlID="lblMaxLevel" DefaultValue="1" Name="Level" 
@@ -15,7 +15,15 @@
                     
                 </SelectParameters>
             </asp:SqlDataSource>
-
+                    <asp:SqlDataSource ID="saveSource" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
+            SelectCommand="SELECT * FROM [Character] WHERE ([CharacterName] = @CharacterName)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="lblName" Name="CharacterName" 
+                    PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
             <asp:Label ID="lblMaxLevel" runat="server" Text="" Visible="False"></asp:Label>
             <asp:Label ID="lblEnemyName" runat="server" Text="Label"></asp:Label>
             <br />

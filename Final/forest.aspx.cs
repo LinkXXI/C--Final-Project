@@ -62,7 +62,8 @@ namespace Final
             }
 
             imgEnemy.ImageUrl = currentMonster.imgURL;
-
+           
+            lblName.Text = playerChar.CharacterName;
             lblCharacterInfo.Text = playerChar.CharacterName + " the " + playerChar.Class + ": " + playerChar.CurrentHealth + "/" + playerChar.Health
                 + "<br />" + "Attack: " + playerChar.Attack;
             lblEnemyName.Text = currentMonster.Name;
@@ -93,7 +94,10 @@ namespace Final
                     playerChar.Gold += monster.goldReward;
                     playerChar.EnemyLevel += 1;
                     Session["Character"] = playerChar;
+                    saveSource.UpdateCommand = ((Character)Session["Character"]).SqlUpdate;
+                    saveSource.Update();
 
+                    Session["Monster"] = null; 
                     string message = "You won this battle!";
                     Response.Redirect("map.aspx?Loaded=true&Message=" + message);
                 }
