@@ -8,8 +8,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class='container'>
+    <div class='container'>        
         <div class="jumbotron">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/img/theDogeKnight.png"/>            
             <h1>Welcome to DogeQuest!</h1>
             <div id="error" runat="server" hidden="true">
                 <asp:Label ID="lblMessage" runat="server" Font-Bold="True"></asp:Label>

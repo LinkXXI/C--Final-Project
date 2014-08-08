@@ -61,6 +61,8 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\doge-wink-212.gif" />
+    <Content Include="img\theDogeKnight.png" />
     <Content Include="mine.aspx" />
     <Content Include="shop.aspx" />
     <Content Include="Web.config" />
