@@ -58,6 +58,15 @@ namespace Final {
         protected global::System.Web.UI.WebControls.DropDownList lstClassSelect;
         
         /// <summary>
+        /// ClassImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ClassImg;
+        
+        /// <summary>
         /// btnSubmit control.
         /// </summary>
         /// <remarks>

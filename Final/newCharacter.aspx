@@ -34,7 +34,8 @@
                 Class:
             </div>
             <div class="col-md-4">
-                <asp:DropDownList ID="lstClassSelect" runat="server" class='control'>
+                <asp:DropDownList ID="lstClassSelect" runat="server" class='control' DataValueField="ProductID"
+                    AutoPostBack="True">
                     <asp:ListItem Text="Warrior" Value="Warrior" />
                     <asp:ListItem Text="Wizard" Value="Wizard" />
                 </asp:DropDownList>
@@ -42,6 +43,9 @@
         </div>
         <div class="row">
             <div class="col-md-4">
+                <div id="ClassImgDiv">
+                    <asp:Image ID="ClassImg" runat="server" />
+                </div>
             </div>
             <div class="col-md-4">
             </div>
@@ -55,5 +59,5 @@
     </div>
     <asp:SqlDataSource ID="characterSource" runat="server" ConnectionString="<%$ ConnectionStrings:InsertCharDS
     %>" SelectCommand="SELECT * FROM [Character]" InsertCommand="INSERT INTO [Character]
-    VALUES"> </asp:SqlDataSource>
+    VALUES"></asp:SqlDataSource>
 </asp:Content>

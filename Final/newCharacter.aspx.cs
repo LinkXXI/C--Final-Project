@@ -12,7 +12,9 @@ namespace Final
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ClassImg.ImageUrl = "img/class/doge" + lstClassSelect.SelectedValue + ".png";
+            ClassImg.Style.Add("height", "50%");
+            ClassImg.Style.Add("width", "50%");
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
