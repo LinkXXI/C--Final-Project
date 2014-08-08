@@ -11,6 +11,7 @@ namespace Final
 {
     public partial class Forest : System.Web.UI.Page
     {
+
         /*String pName;
         int pAttack;
         int pHealth;
@@ -33,9 +34,11 @@ namespace Final
             lblMaxLevel.Text = playerChar.EnemyLevel.ToString();
             if (Session["Monster"] == null)
             {
+
                 DataView dv = new DataView();
                 dv = (DataView)monsterSource.Select(DataSourceSelectArguments.Empty);
-                DataTable dt = dv.ToTable();
+                DataTable dt = new DataTable();
+                dt = dv.ToTable();
                 DataSet ds = new DataSet();
                 ds.Tables.Add(dt);
 
@@ -49,12 +52,16 @@ namespace Final
                 currentMonster.goldReward = (int)dr.ItemArray.GetValue(4);
                 //currentMonster.imgURL = (string)dr.ItemArray.GetValue(5);
 
+                currentMonster.imgURL = "img/monsters/" + (int)dr.ItemArray.GetValue(0) + "monster.jpg";
+
                 Session["Monster"] = currentMonster;
             }
             else
             {
                 currentMonster = (Monster)Session["Monster"];
             }
+
+            imgEnemy.ImageUrl = currentMonster.imgURL;
 
             lblCharacterInfo.Text = playerChar.CharacterName + " the " + playerChar.Class + ": " + playerChar.CurrentHealth + "/" + playerChar.Health
                 + "<br />" + "Attack: " + playerChar.Attack;
@@ -65,25 +72,23 @@ namespace Final
 
         protected void btnAttack_Click(object sender, EventArgs e)
         {
-            /*if (pHealth > 0)
+            Character playerChar = (Character)Session["Character"];
+            if (playerChar.CurrentHealth > 0)
             {
-                if (mHealth > 0)
+                Monster monster = (Monster)Session["Monster"];
+                if (monster.CurrentHealth > 0)
                 {
-                    mDamage += pAttack;
-                    mDamage = ((Character)Session["Monster"]).DamageTaken;
-                    mHealth = mHealth - mDamage;
+                    monster.DamageTaken += playerChar.Attack;
 
-                    pDamage += mAttack;
-                    pDamage = ((Character)Session["Character"]).DamageTaken;
-                    pHealth = pHealth - pDamage;
+                    playerChar.DamageTaken += monster.Attack;
 
-                    player.InnerHtml = pName + ":    Attack: " + pAttack + " Health: " + pHealth;
-                    monster.InnerHtml = mName + ":    Attack: " + mAttack + " Health: " + mHealth;
+                    lblCharacterInfo.Text = playerChar.CharacterName + ":    Attack: " + playerChar.Attack + " Health: " + playerChar.CurrentHealth;
+                    lblEnemyStats.Text = monster.Name + ":    Attack: " + monster.Attack + " Health: " + monster.CurrentHealth;
 
                 }
-                player.InnerHtml = "YOU WIN!";
+                lblCharacterInfo.Text = "YOU WIN!";
             }
-            player.InnerHtml = "YOU LOSE!";*/
+            lblCharacterInfo.Text = "YOU LOSE!";
         }
 
         protected void btnRun_Click(object sender, EventArgs e)

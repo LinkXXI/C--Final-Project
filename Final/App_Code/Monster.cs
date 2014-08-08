@@ -14,5 +14,12 @@ namespace Final
         public int DamageTaken { get; set; }
         public int goldReward { get; set; }
         public string imgURL { get; set; }
+        public int CurrentHealth
+        {
+            get
+            {
+                return Health - DamageTaken;
+            }
+        }
     }
 }

@@ -4,9 +4,10 @@
         <p>Welcome to the Forest! Kill the monster!</p>
 
         <div runat="server" id="combat" class="container">
+
             <asp:SqlDataSource ID="monsterSource" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = @Level)">
+                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = 1)">
                 <SelectParameters>
                     
                     <asp:ControlParameter ControlID="lblMaxLevel" DefaultValue="1" Name="Level" 
@@ -14,6 +15,7 @@
                     
                 </SelectParameters>
             </asp:SqlDataSource>
+
             <asp:Label ID="lblMaxLevel" runat="server" Text="" Visible="False"></asp:Label>
             <asp:Label ID="lblEnemyName" runat="server" Text="Label"></asp:Label>
             <br />
