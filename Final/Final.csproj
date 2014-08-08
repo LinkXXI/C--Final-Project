@@ -60,6 +60,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forest.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\doge-wink-212.gif" />
     <Content Include="img\theDogeKnight.png" />
@@ -78,11 +79,17 @@
     <Content Include="map.aspx" />
     <Content Include="loadCharacter.aspx" />
     <Content Include="deleteCharacter.aspx" />
-    <Content Include="forest.aspx" />
     <Content Include="house.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Character.cs" />
+    <Compile Include="Forest.aspx.cs">
+      <DependentUpon>Forest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forest.aspx.designer.cs">
+      <DependentUpon>Forest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="house.aspx.cs">
       <DependentUpon>house.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,13 +169,6 @@
     </Compile>
     <Compile Include="deleteCharacter.aspx.designer.cs">
       <DependentUpon>deleteCharacter.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="forest.aspx.cs">
-      <DependentUpon>forest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="forest.aspx.designer.cs">
-      <DependentUpon>forest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
