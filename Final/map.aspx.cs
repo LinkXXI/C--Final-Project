@@ -43,5 +43,10 @@ namespace Final
         {
             Response.Redirect("shop.aspx");
         }
+
+        protected void btnForest_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("forest.aspx");
+        }
     }
 }

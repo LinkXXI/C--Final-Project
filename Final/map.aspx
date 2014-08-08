@@ -7,7 +7,8 @@
             <asp:Label ID="LabelMsg" runat="server" Font-Bold="true"></asp:Label>
         </div>
         <br />
-        <asp:Button ID="btnForest" runat="server" Text="Forest" class="btn btn-default"/>
+        <asp:Button ID="btnForest" runat="server" Text="Forest" class="btn btn-default" 
+            onclick="btnForest_Click"/>
         <asp:Button ID="btnHouse" runat="server" Text="House" class="btn btn-default"
             onclick="btnHouse_Click" />
         <asp:Button ID="btnMine" runat="server" Text="Mine" class="btn btn-default" 
