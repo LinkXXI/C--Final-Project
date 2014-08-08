@@ -32,7 +32,7 @@ namespace Final
         { 
             get 
             {
-                return "UPDATE [Character] SET [Attack] = " + Attack + ", [Health] = " + Health + ", [DamageTaken] = " + DamageTaken + ", [Days] = " + Days + ", [Gold] = " + Gold + " WHERE [CharacterName] = '" + CharacterName + "';";
+                return "UPDATE [Character] SET [Attack] = " + Attack + ", [Health] = " + Health + ", [DamageTaken] = " + DamageTaken + ", [Days] = " + Days + ", [EnemyLevel] = " + EnemyLevel + ", [Gold] = " + Gold + " WHERE [CharacterName] = '" + CharacterName + "';";
             } 
         }
 

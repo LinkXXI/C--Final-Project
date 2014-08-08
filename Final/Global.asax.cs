@@ -39,12 +39,18 @@ namespace Final
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings[0].ConnectionString);
+            conn.Open();
+            SqlCommand command = new SqlCommand(((Character)Session["Character"]).SqlUpdate, conn);
+            command.ExecuteNonQuery();
         }
 
         protected void Application_End(object sender, EventArgs e)
         {
-
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings[0].ConnectionString);
+            conn.Open();
+            SqlCommand command = new SqlCommand(((Character)Session["Character"]).SqlUpdate, conn);
+            command.ExecuteNonQuery();
         }
     }
 }
