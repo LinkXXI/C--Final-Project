@@ -18,7 +18,7 @@
                     <asp:RequiredFieldValidator ID="txtCharValidate" runat="server" ErrorMessage="Cannot delete without a character name!" Display="Dynamic" ControlToValidate="txtCharName"></asp:RequiredFieldValidator>
                 </div>
             </div>
-            <asp:Button ID="btnSubmit" runat="server" Text="Button" 
+            <asp:Button ID="btnSubmit" runat="server" Text="Delete Character" 
                 onclick="btnSubmit_Click" />
         </div>    
     </div>
