@@ -7,8 +7,7 @@
         Items Here
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-                SelectCommand="SELECT ItemName, Attack, Health, Class, Cost FROM Item ORDER BY Cost" 
-                UpdateCommand="UPDATE Character SET Attack =, Health =, Gold = WHERE (CharacterName = 'character')">
+                SelectCommand="SELECT ItemName, Attack, Health, Class, Cost FROM Item ORDER BY Cost">
             </asp:SqlDataSource>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="ItemName" DataSourceID="SqlDataSource1" 
@@ -26,8 +25,13 @@
                 </Columns>
             </asp:GridView>
         </div>
-
-
+        <div id="itemDiv" runat="server" style="display: none;">
+        <div id="Div1" runat="server" style="display: none;"></div>
+        <div id="Div2" runat="server" style="display: none;"></div>
+        <div id="Div3" runat="server" style="display: none;"></div>
+        <div id="Div4" runat="server" style="display: none;"></div>
+        <div id="Div5" runat="server" style="display: none;"></div>
+        </div>
         <asp:Button ID="btnBuy" runat="server" Text="Buy" class="btn btn-default" 
             onclick="btnBuy_Click"/>
         <br/>
@@ -35,6 +39,7 @@
         <br />
         <asp:Button ID="btnMap" runat="server" Text="Return to Map" 
             onclick="btnMap_Click" />
+            <div runat="server" id="message" class="container">
     </div>
     
 </asp:Content>
