@@ -68,6 +68,12 @@
     <Content Include="img\forest.png" />
     <Content Include="img\home.png" />
     <Content Include="img\mines.png" />
+    <Content Include="img\monsters\1monster.jpg" />
+    <Content Include="img\monsters\2monster.jpg" />
+    <Content Include="img\monsters\3monster.jpg" />
+    <Content Include="img\monsters\4monster.jpg" />
+    <Content Include="img\monsters\5monster.jpg" />
+    <Content Include="img\monsters\6monster.jpg" />
     <Content Include="img\shop.png" />
     <Content Include="img\theDogeKnight.png" />
     <Content Include="mine.aspx" />

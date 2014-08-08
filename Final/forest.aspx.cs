@@ -85,10 +85,23 @@ namespace Final
                     lblCharacterInfo.Text = playerChar.CharacterName + ":    Attack: " + playerChar.Attack + " Health: " + playerChar.CurrentHealth;
                     lblEnemyStats.Text = monster.Name + ":    Attack: " + monster.Attack + " Health: " + monster.CurrentHealth;
 
+
                 }
-                lblCharacterInfo.Text = "YOU WIN!";
+                else
+                {
+                    lblCharacterInfo.Text = "YOU WIN! You received: " + monster.goldReward + " gold.";
+                    playerChar.Gold += monster.goldReward;
+                    playerChar.EnemyLevel += 1;
+                    Session["Character"] = playerChar;
+
+                    string message = "You won this battle!";
+                    Response.Redirect("map.aspx?Loaded=true&Message=" + message);
+                }
             }
-            lblCharacterInfo.Text = "YOU LOSE!";
+            else
+            {
+                lblCharacterInfo.Text = "YOU LOSE!";
+            }
         }
 
         protected void btnRun_Click(object sender, EventArgs e)
