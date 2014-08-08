@@ -59,8 +59,8 @@ namespace Final
                     playerChar.Health = health;
                     playerChar.DamageTaken = damage;
                     playerChar.Days = days;
+                    playerChar.EnemyLevel = enemyLevel; 
                     playerChar.Gold = gold;
-                    //playerChar.EnemyLevel = health;
 
                     Session.Add("Character", playerChar);
 

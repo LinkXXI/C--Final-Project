@@ -7,7 +7,7 @@
 
             <asp:SqlDataSource ID="monsterSource" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:InsertCharDS %>" 
-                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = @level)">
+                SelectCommand="SELECT * FROM [Monster] WHERE ([Level] = @Level)">
                 <SelectParameters>
                     
                     <asp:ControlParameter ControlID="lblMaxLevel" DefaultValue="1" Name="Level" 
